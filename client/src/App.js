@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import SavedList from './Movies/SavedList';
 
@@ -10,10 +11,12 @@ const App = () => {
   };
 
   return (
-    <div>
-      <SavedList list={savedList} />
-      <div>Replace this Div with your Routes</div>
-    </div>
+    <Router>
+      <div>
+        <SavedList list={savedList} />
+        <div>Replace this Div with your Routes</div>
+      </div>
+    </Router>
   );
 };
 
